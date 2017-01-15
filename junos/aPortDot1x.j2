@@ -1,0 +1,18 @@
+set protocols dot1x authenticator interface {{ port }} authentication-order [ dot1x mac-radius ]
+set protocols dot1x authenticator interface {{ port }} guest-vlan {{ guest_vlan }}
+set protocols dot1x authenticator interface {{ port }} mac-radius authentication-protocol pap
+set protocols dot1x authenticator interface {{ port }} maximum-requests 2
+set protocols dot1x authenticator interface {{ port }} quiet-period 600
+set protocols dot1x authenticator interface {{ port }} reauthentication 28800
+set protocols dot1x authenticator interface {{ port }} retries 0
+set protocols dot1x authenticator interface {{ port }} server-fail vlan-name {{ srv_fail_vlan }}
+set protocols dot1x authenticator interface {{ port }} server-reject {{ srv_rjct_vlan }}
+set protocols dot1x authenticator interface {{ port }} server-reject eapol-block block-interval 180
+set protocols dot1x authenticator interface {{ port }} server-timeout 40
+set protocols dot1x authenticator interface {{ port }} supplicant multiple
+set protocols dot1x authenticator interface {{ port }} supplicant-timeout 30
+set protocols dot1x authenticator interface {{ port }} transmit-period 2
+
+set ethernet-switching-options secure-access-port interface {{ port }} mac-limit 2
+set ethernet-switching-options secure-access-port interface {{ port }} vlan {{ vlan }} mac-limit 1
+set ethernet-switching-options secure-access-port interface {{ port }} vlan {{ voice_vlan }} mac-limit 1

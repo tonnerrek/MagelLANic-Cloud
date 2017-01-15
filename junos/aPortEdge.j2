@@ -1,0 +1,7 @@
+{% if stp == "rstp" or stp == "mst" %}
+ set protocols {{ stp }} interface {{ port }} edge
+{% elif stp == "vstp" %}
+ {% for vlan in vlans %}
+  set protocols vstp vlan {{ vlan }} interface {{ port }} edge
+ {% endfor %}
+{% endif %}
