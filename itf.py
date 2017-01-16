@@ -7,6 +7,8 @@ with open("itf.yaml", "r") as f:
 
  
 env = Environment(loader=FileSystemLoader("./junos/interfaces/"))
+env.line_statement_prefix = "#"
+env.line_comment_prefix = "##"
 port = raw_input("Please enter port type:")
 template = env.get_template('cPort' + port + '.j2')
 

@@ -1,1 +1,3 @@
+#if not interface.nativevlan == False
 set interfaces {{ interface.port }} unit 0 family ethernet-switching native-vlan-id {{ interface.nativevlan }}
+#endif
