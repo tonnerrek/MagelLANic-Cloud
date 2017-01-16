@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+#
+# zvk@2017
+# pseudo crypto module for Cisco and Juniper weak password
+#
 
 import re
 import gsaerr
