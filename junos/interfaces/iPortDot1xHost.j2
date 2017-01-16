@@ -1,4 +1,4 @@
 set ethernet-switching-options secure-access-port interface {{ interface.port }} mac-limit 2
-{% for iter_vlan in interface.vlans %}
- set ethernet-switching-options secure-access-port interface {{ interface.port }} vlan {{ iter_vlan }} mac-limit 1
-{% endfor %}
+{%- for iter_vlan in interface.vlans %}
+set ethernet-switching-options secure-access-port interface {{ interface.port }} vlan {{ iter_vlan }} mac-limit 1
+{%- endfor -%}
