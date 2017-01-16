@@ -1,0 +1,5 @@
+set interfaces {{ interface.port }} unit 0 family ethernet-switching port-mode trunk
+
+{% for iter_vlan in interface.vlans %}
+ set interfaces {{ interface.port }} unit 0 family ethernet-switching vlan members {{ iter_vlan }}
+{% endfor %}

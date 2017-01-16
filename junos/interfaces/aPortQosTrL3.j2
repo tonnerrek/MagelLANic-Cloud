@@ -1,0 +1,3 @@
+set class-of-service interfaces {{ interface.port }} scheduler-map {{ interface.schedulermap }}
+set class-of-service interfaces {{ interface.port }} unit 0 rewrite-rules dscp {{ interface.rewriter }}
+set class-of-service interfaces {{ interface.port }} unit 0 classifiers dscp {{ interface.classifier }}

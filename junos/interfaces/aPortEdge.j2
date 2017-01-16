@@ -1,0 +1,7 @@
+{%- if interface.stp == "rstp" or interface.stp == "mst" -%}
+ set protocols {{ interface.stp }} interface {{ interface.port }} edge
+{%- elif interface.stp == "vstp" -%}
+{%- for iter_vlan in interface.vlans %}
+set protocols vstp vlan {{ iter_vlan }} interface {{ interface.port }} edge
+{%- endfor -%}
+{%- endif %}

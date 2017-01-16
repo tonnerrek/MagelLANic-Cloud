@@ -1,0 +1,4 @@
+set ethernet-switching-options voip interface {{ interface.port }} vlan {{ interface.vlans[1] }}
+set ethernet-switching-options voip interface {{ interface.port }} forwarding-class {{ interface.voice_class }}
+set class-of-service interfaces {{ interface.port }} unit 0 classifiers dscp {{ interface.classifier }}
+set ethernet-switching-options secure-access-port interface {{ interface.port }} voip-mac-exclusive

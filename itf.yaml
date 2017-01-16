@@ -1,0 +1,20 @@
+#feed
+
+---
+
+classifier: "VOICE-DSCP-CLASSIFIER"
+description: "OFC-"
+voice_class: "Voice"
+guest_vlan: "GUEST_VLAN"
+nativevlan: False
+port: "ge-0/0/0"
+rewriter: "REWRITE-DSCP"
+schedulermap: "SCHEDULING"
+srv_fail_vlan: "GUEST_VLAN"
+srv_rjct_vlan: "GUEST_VLAN"
+stp: "vstp"
+vlans: ["OFFICE_VLAN", "VOICE_VLAN"]
+voice_policer: "Voice-Policer"
+
+
+...
