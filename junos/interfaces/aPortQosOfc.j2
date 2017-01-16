@@ -1,0 +1,2 @@
+set interfaces {{ interface.port }} unit 0 family ethernet-switching filter input {{ interface.voice_policer }}
+set class-of-service interfaces {{ interface.port }} scheduler-map {{ interface.schedulermap }}

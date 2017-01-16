@@ -1,5 +1,0 @@
-set interfaces {{ port }} unit 0 family ethernet-switching port-mode trunk
-
-{% for vlan in vlans %}
- set interfaces {{ port }} unit 0 family ethernet-switching vlan members {{ vlan }}
-{% endfor %}
