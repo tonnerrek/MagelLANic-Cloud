@@ -17,7 +17,7 @@ def cisco7Decrypt(inputHash):
    inputHash = inputHash.upper()
 
    if len(inputHash) %2 != 0 or not match('^[0-9]{2}[0-9A-F]{2,}$', inputHash):
-      gsaerr.errMSG("WARNING", "Incorret Cisco type7 hash", 'STD_WRN')
+      gsaerr.errMSG("WARNING", "Incorrect Cisco type7 hash", 'STD_WRN')
    else:
       inputHash = [int(inputHash[i:i+2], 16) if i > 0 else int(inputHash[i:i+2]) for i in xrange(0, len(inputHash), 2) ]
       output = "".join([chr(i ^ vig[(inputHash[0] + id) % 53]) for id, i in enumerate(inputHash[1:])])
@@ -27,6 +27,12 @@ def cisco7Encrypt(inputString):
    seed = randint(0, 15)
    output = "{0:0>2}".format(seed) + "".join([format((ord(i) ^ vig[(seed + id) % 53]), '02X')  for id, i in enumerate(inputString)])
    return output
+
+def juniper9Decrypt(inputHash):
+   pass
+
+def juniper9Encrypt(inputHash):
+   pass
 
 if __name__ == '__main__':
    pass
