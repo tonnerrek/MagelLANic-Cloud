@@ -42,18 +42,3 @@ if __name__ == '__main__':
 
    inputCheck(vlan['name'], vlan['id'], vlan['domain'])
    test()
-   print "046E1803362E595C260E0B240619050A2D"
-   crypto.cisco7Encrypt("046E1803362E595C260E0B240619050a2d")
-   crypto.cisco7Encrypt("046")
-   crypto.cisco7Encrypt("046E803362E595C260E0B240619050A2D")
-   crypto.cisco7Encrypt("046E1803362E595C260E0B240584SSSD")
-   crypto.cisco7Encrypt("095C4F1A0A1218000F")
-   crypto.cisco7Encrypt("12090404011C03162E")
-   crypto.cisco7Encrypt("020E0D7206320A325847071E5F5E")
-
-#   myscreen = curses.initscr()
-#   myscreen.border(0)
-#   myscreen.addstr(12,25, "no")
-#   myscreen.refresh()
-#   myscreen.getch()
-#   curses.endwin()
